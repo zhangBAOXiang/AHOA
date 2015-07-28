@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[SoapXmlParseHelper XmlToArray:]:SoapXmlParseHelper.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self nodeChilds:node]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController webView:didFailLoadWithError:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[error userInfo]">
+            </PersistentString>
+            <PersistentString
+               value = "[error code]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__71-[MainViewController locationManager:didUpdateToLocation:fromLocation:]_block_invoke:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.myLocation">
+            </PersistentString>
+            <PersistentString
+               value = "[@&quot;&#37073;&#24030;&#24066;&quot; rangeOfString:@&quot;&#37073;&#24030;&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController insertOrUpdateSqliteTable:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileds[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController loadThePage:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[commonUtil docPath]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[commonUtil soapCall:postMethod:postData:]:commonUtil.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "soapUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PCStackMenu initWithTitles:withImages:atStartPoint:inView:itemHeight:menuDirection:]:PCStackMenu.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self superView]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController onLogin:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "serverHost">
+            </PersistentString>
+            <PersistentString
+               value = "[dict objectForKey:@&quot;message&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LocalViewController loadHtmlContentsFromLocal:]:LocalViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[commonUtil docPath]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
