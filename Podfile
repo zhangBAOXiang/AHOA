@@ -14,6 +14,12 @@ pod 'XMLDictionary', '~> 1.4'
 end
 
 target 'AHOATests' do
-
 end
 
+post_install do |installer|
+installer.pods_project.targets.each do |target|
+target.build_configurations.each do |config|
+config.build_settings['ARCHS'] = "armv7 armv7s i386"
+end
+end
+end
