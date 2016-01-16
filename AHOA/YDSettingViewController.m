@@ -12,6 +12,10 @@
 #import "YDLoginViewController.h"
 #import "YDRebindViewController.h"
 #import "YDMenuSetController.h"
+#import "YDIndSaleStore.h"
+#import "YDSaleStockStore.h"
+#import "YDSaleStore.h"
+
 
 @interface YDSettingViewController ()
 
@@ -128,14 +132,14 @@
                 cell.textLabel.text=@"检查版本更新";
                 cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
                 break;
-                
+            /*
             case 4:
                 cell.imageView.image=[UIImage imageNamed:@"icon_headset.png"];
                 cell.textLabel.text=@"首页设置";
                 cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
                 break;
-                
-            case 5:
+            */
+            case 4:
                 cell.imageView.image=[UIImage imageNamed:@"icon_remove.png"];
                 cell.textLabel.text=@"清理缓存";
                 cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
@@ -275,15 +279,15 @@
                 }
             }
         }
-        
+        /*
         if (indexPath.row == 4) {
             //菜单首页设置
             UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
             YDMenuSetController *menuSetController=[storyBoard instantiateViewControllerWithIdentifier:@"menuset"];
             [self presentViewController:menuSetController animated:YES completion:nil];
         }
-        
-        if (indexPath.row == 5) {
+        */
+        if (indexPath.row == 4) {
             //清理缓存
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) objectAtIndex:0];
@@ -423,7 +427,7 @@
         //更新版本号
         [defaults setValue:self.currentVersion forKey:@"version"];
         [defaults synchronize];
-        
+        [defaults removeObjectForKey:@"menuExists"];
         //在线下载安装ipa
         NSURL *url=[NSURL URLWithString:@"itms-services://?action=download-manifest&url="
                     "https://coding.net/u/stillzzj/p/zoomlgd/git/raw/master/ahzyIphoneInHouse.plist"];
@@ -431,9 +435,13 @@
         [[UIApplication sharedApplication] openURL:url];
         [self exitApplication];
     }
+    
 }
 
 - (void)exitApplication {
+    [YDIndSaleStore removePath];
+    [YDSaleStockStore removePath];
+    [YDSaleStore removePath];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"versionNotUpdate"];
@@ -477,6 +485,16 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LockAndLogin" bundle:nil];
     YDLoginViewController *loginViewController=[storyBoard instantiateViewControllerWithIdentifier:@"YDLoginViewController"];
     delegate.window.rootViewController=loginViewController;
+    [YDIndSaleStore removePath];
+    [YDSaleStockStore removePath];
+    [YDSaleStore removePath];
+    
+    NSString *customURL = @"MobileArk://";
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:customURL]]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
+    }
+    
+
 }
 
 @end

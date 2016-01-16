@@ -44,7 +44,8 @@ typedef enum {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.yorm = @"year";
-    [self customTitleView:@"调拨量(年)" withDateString:nil];
+    self.timeStamp = [[NSUserDefaults standardUserDefaults] objectForKey:@"analyseTime"];
+    [self customTitleView:@"调拨量(年)" withDateString:self.timeStamp];
     
     [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0x3da8e5)];
     UIButton *btn=[[UIButton alloc] init];
@@ -84,8 +85,8 @@ typedef enum {
     self.HUD.labelText=@"加载数据..";
     //显示对花框
     [self.HUD show:YES];
-    
-    [self getDataFormCacheOrNet:@"1,000000"];
+    //修改的地方
+    [self getDataFormCacheOrNet:@"1,000000,0,0"];
 }
 
 //按钮定制
@@ -145,7 +146,7 @@ typedef enum {
             break;
         case kCurrentIsBrand:
             self.indState = kCurrentIsInDustry;
-            self.leftSource = self.rightSource =[YDIndSaleStore unarchivedData:@"1,000000"];
+            self.leftSource = self.rightSource =[YDIndSaleStore unarchivedData:@"1,000000,0,0"];
             [self.leftTable reloadData];
             [self.rightTable reloadData];
             break;
@@ -161,7 +162,7 @@ typedef enum {
             switch (self.lastStateForStruct) {
                 case kCurrentIsInDustry:{
                     self.indState=kCurrentIsInDustry;
-                    [self backToLastLevelForCode:@"1,000000" ];
+                    [self backToLastLevelForCode:@"1,000000,0,0" ];
                     break;
                 }
                 case kCurrentIsBrand:{
@@ -290,7 +291,7 @@ typedef enum {
     if ([array count] != 0) {
         [self.HUD hide:YES];
         self.leftSource=self.rightSource=array;
-        self.rightSource = array;
+        //self.rightSource = array;
         [self.leftTable reloadData];
         [self.rightTable reloadData];
     }else{
@@ -321,14 +322,14 @@ typedef enum {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reuseIdentifer =@"cell";
+    static NSString *reuseIdentifer =@"UITableViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifer];
     if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:reuseIdentifer];
     }
     
-    //清楚subviews
+    //清除subviews
     NSArray *subviews = [[NSArray alloc] initWithArray:cell.contentView.subviews];
     for (UIView *subview in subviews) {
         [subview removeFromSuperview];
@@ -342,7 +343,7 @@ typedef enum {
         UILabel *label = [[UILabel alloc] init];
         [label setText:sale.name];
         label.numberOfLines = 0;
-        label.font = [UIFont boldSystemFontOfSize:17.0f];
+        label.font = [UIFont boldSystemFontOfSize:15.0f];
 //        label.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:label];
         
@@ -414,10 +415,10 @@ typedef enum {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.leftTable) {
-        [self.rightTable selectRowAtIndexPath:indexPath animated:NO
+        [self.leftTable selectRowAtIndexPath:indexPath animated:NO
                                scrollPosition:UITableViewScrollPositionNone];
     } else {
-        [self.leftTable selectRowAtIndexPath:indexPath animated:NO
+        [self.rightTable selectRowAtIndexPath:indexPath animated:NO
                               scrollPosition:UITableViewScrollPositionNone];
     }
     
@@ -445,7 +446,17 @@ typedef enum {
 }
 
 - (void)doubleClick:(UITapGestureRecognizer *)recognizer {
-    NSIndexPath *indexPath=[self.rightTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    NSIndexPath *indexPath;
+    NSIndexPath *temp1;
+    NSIndexPath *temp2;
+        temp1=[self.leftTable indexPathForCell:(UITableViewCell *)recognizer.view];
+        temp2=[self.rightTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    if (temp1 >= temp2) {
+        indexPath = temp1;
+    }else{
+        indexPath = temp2;
+    }
+
     [self.rightTable selectRowAtIndexPath:indexPath
                                  animated:NO
                            scrollPosition:UITableViewScrollPositionNone];
@@ -460,6 +471,7 @@ typedef enum {
         case kCurrentIsInDustry:
             self.indState = kCurrentIsBrand;
             code = [[NSString alloc] initWithFormat:@"1,%@;2,000000",selectInd.code];
+            //NSLog(@"Precode:%@",selectInd.code);
             preCode=[[NSString alloc] initWithFormat:@"1,%@",selectInd.code];
             [defaults removeObjectForKey:@"preIndIndustryCode"];
             [defaults setValue:preCode forKey:@"preIndIndustryCode"];
@@ -471,6 +483,7 @@ typedef enum {
         case kCurrentIsBrand:
             self.indState = kCurrentIsSpec;
             code=[[NSString alloc] initWithFormat:@"%@;2,%@;3,000000",[defaults valueForKey:@"preIndIndustryCode"],selectInd.code];
+            //NSLog(@"IsSpec:%@",code);
             preCode=[[NSString alloc] initWithFormat:@"%@;2,%@",[defaults valueForKey:@"preIndIndustryCode"],selectInd.code];
             [defaults removeObjectForKey:@"preIndBrandCode"];
             [defaults setValue:preCode forKey:@"preIndBrandCode"];

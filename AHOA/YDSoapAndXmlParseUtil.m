@@ -148,7 +148,6 @@ static NSData *responseData;
         }
         childs=[[childs objectAtIndex:0] children];
     }
-    
     return resultString;
 }
 

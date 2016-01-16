@@ -12,18 +12,22 @@
 #import "YDCommonHead.h"
 #import "YDMenuStore.h"
 #import "YDSlipCell.h"
+#import "YDFunctionMenuCell.h"
+#import "YDSlideImageCell.h"
 #import "YDMenu.h"
 
 
 #define RStartTag 100
 
-@interface YDMainViewController ()<YDSlipCellDelegate,UIWebViewDelegate,NSURLConnectionDataDelegate>
+@interface YDMainViewController ()<YDSlipCellDelegate,YDFunctionMenuCellDelegate,UIWebViewDelegate,NSURLConnectionDataDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (strong ,nonatomic) MBProgressHUD *HUD;
 @property (strong, nonatomic) YDMenu *menu;
 @property (copy, nonatomic) NSString *serverAddress;
 @property (strong, nonatomic) UILabel *leftLabel;
 @property (strong, nonatomic) NSMutableData *data;
+
+
 
 @end
 
@@ -49,21 +53,23 @@
         
     }
     
-    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0x3da8e5)];
-    
+    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0xF7F7F7)];
+    //F7F7F7
+    //35A7E8
     //导航栏左上角
-    UIView *leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 135, 30)];
+    UIView *leftView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 155, 30)];
     UIButton *leftBtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     leftBtn.contentMode = UIViewContentModeScaleAspectFit;
-    [leftBtn setImage:[UIImage imageNamed:@"People.png"] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"welcome_top"] forState:UIControlStateNormal];
     [leftView addSubview:leftBtn];
 
     self.leftLabel=[[UILabel alloc] init];
     self.leftLabel.textColor=[UIColor whiteColor];
     
-    
-    self.leftLabel.text=[defaults valueForKey:@"personName"];
-    self.leftLabel.frame=CGRectMake(35, 0, 100, 30);
+    self.leftLabel.text=@"营销客服平台";
+    self.leftLabel.textColor = [UIColor blackColor];
+    //self.leftLabel.text=[defaults valueForKey:@"personName"];
+    self.leftLabel.frame=CGRectMake(35, 0, 120, 30);
     [leftView addSubview:self.leftLabel];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithCustomView:leftView];
 //    [defaults addObserver:self forKeyPath:@"personName" options:NSKeyValueObservingOptionNew context:NULL];
@@ -73,8 +79,8 @@
     [center addObserver:self selector:@selector(nameChanged:) name:@"nameChanged" object:nil];
     
     //导航栏右上角
-    UIButton *rightBtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    UIImage *image=[UIImage imageNamed:@"ft_head_image.png"];
+    UIButton *rightBtn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    UIImage *image=[UIImage imageNamed:@"txl.png"];
     rightBtn.contentMode = UIViewContentModeScaleAspectFit;
     [rightBtn setImage:image forState:UIControlStateNormal];
     [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:12]];
@@ -86,6 +92,18 @@
     self.menu=[NSKeyedUnarchiver unarchiveObjectWithData:data];
     [center removeObserver:self name:@"menuChanged" object:nil];
     [center addObserver:self selector:@selector(menuChanged:) name:@"menuChanged" object:nil];
+    //
+    //注册tableviewcell
+    [self.tableView registerClass:[YDFunctionMenuCell class] forCellReuseIdentifier:@"YDFunctionMenuCell"];
+    [self.tableView registerClass:[YDSlideImageCell class] forCellReuseIdentifier:@"YDSlideImageCell"];
+    //self.tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    self.tableView.delegate = self;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0xF7F7F7)];
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0x35A7E8)];
 }
 
 - (void)handleContact
@@ -129,23 +147,31 @@
 }
 
 #pragma mark - Table view data source
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
+    //return 2;
     return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    /*
     if (section == 1) {
         return 2;
     }
+     */
     return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     switch (indexPath.section) {
         case 0:
             return 200;
@@ -164,8 +190,20 @@
             return 45;
             break;
     }
+     */
+    CGFloat height;
+    switch (indexPath.section) {
+        case 0:
+            height = 130;
+            break;
+            
+        default:
+            height = 400;
+            break;
+    }
+    return height;
 }
-
+/*
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section != 0) {
@@ -175,10 +213,40 @@
         return 0;
     }
 }
-
+*/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = nil;
+    if (indexPath.section == 0) {
+        YDSlideImageCell *slideCell = [tableView dequeueReusableCellWithIdentifier:@"YDSlideImageCell"];
+        /*
+        if (slideCell == nil) {
+            slideCell=[[YDSlideImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YDSlideImageCell"];
+        }*/
+        //slideCell.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 185);
+        slideCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        slideCell.backgroundColor=[UIColor clearColor];
+        cell = slideCell;
+                
+    }else{
+        YDFunctionMenuCell *menuCell = [tableView dequeueReusableCellWithIdentifier:@"YDFunctionMenuCell"];
+        /*
+        if (menuCell == nil) {
+            menuCell=[[YDFunctionMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YDFunctionMenuCell"];
+        }
+         */
+        //menuCell.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 400);
+        menuCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        menuCell.cellDelegate=self;
+        menuCell.backgroundColor=[UIColor clearColor];
+        
+        cell = menuCell;
+        
+    }
+    cell.backgroundColor = UIColorFromRGB(0xFEFFFF);
+        return cell;
     
+    /*
     if (indexPath.section == 0) {
         //滑动菜单
         YDSlipCell *menuCell=[tableView dequeueReusableCellWithIdentifier:@"SlipCell"];
@@ -248,14 +316,10 @@
         
         return webcell;
     }
+     */
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-}
-
-
+/*
 #pragma mark - Web View Delegate Mehthods
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
@@ -299,9 +363,9 @@
 {
     [self.HUD hide:YES];
 }
-
+*/
 #pragma mark - YDSlipCell Delegate Method
-- (void)productCell:(YDSlipCell *)cell actionWithFlag:(NSInteger)flag
+- (void)productCell:(YDFunctionMenuCell *)cell actionWithFlag:(NSInteger)flag
 {
 //    NSLog(@"url=%@",cell.selectedURL); 
     if ([cell.selectedURL isEqualToString:@"Anaylse"]) {
@@ -419,6 +483,7 @@
 {
     [self.tableView reloadData];
 }
+
 
 
 @end

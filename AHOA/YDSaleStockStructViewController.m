@@ -124,7 +124,7 @@
                                       reuseIdentifier:reuseIdentifer];
     }
     
-    //清楚subviews
+    //清除subviews
     NSArray *subviews = [[NSArray alloc] initWithArray:cell.contentView.subviews];
     for (UIView *subview in subviews) {
         [subview removeFromSuperview];
@@ -136,7 +136,7 @@
     }else {
         UILabel *label = [[UILabel alloc] init];
         [label setText:stock.stockname];
-        label.numberOfLines = 0;
+        label.numberOfLines = 1;
         label.font = [UIFont boldSystemFontOfSize:17.0f];
         //        label.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:label];

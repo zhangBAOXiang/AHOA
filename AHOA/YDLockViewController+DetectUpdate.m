@@ -7,6 +7,10 @@
 //
 
 #import "YDLockViewController+DetectUpdate.h"
+#import "YDIndSaleStore.h"
+#import "YDSaleStockStore.h"
+#import "YDSaleStore.h"
+
 
 @implementation YDLockViewController (DetectUpdate)
 
@@ -82,6 +86,7 @@
     if (buttonIndex == 0) {
         //在线下载安装ipa
         
+        [defaults removeObjectForKey:@"menuExists"];
         //更新版本号
         [defaults setValue:self.currentVersion forKey:@"version"];
         [defaults synchronize];
@@ -103,9 +108,15 @@
         }
         
     }
+    
+    
 }
 
 - (void)exitApplication {
+    
+    [YDIndSaleStore removePath];
+    [YDSaleStockStore removePath];
+    [YDSaleStore removePath];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"versionNotUpdate"];

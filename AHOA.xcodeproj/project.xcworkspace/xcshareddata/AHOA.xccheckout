@@ -10,31 +10,31 @@
 	<string>AHOA</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7F26A5FC-C684-4D8A-B14E-2017A46E42A6</key>
-		<string>https://github.com/floiges/YNZY.git</string>
+		<key>A38F74648A5FB76C3ADCE018F8CE772C5B669216</key>
+		<string>https://github.com/floiges/AHOA.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AHOA.xcodeproj/project.xcworkspace</string>
+	<string>AHOA.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7F26A5FC-C684-4D8A-B14E-2017A46E42A6</key>
+		<key>A38F74648A5FB76C3ADCE018F8CE772C5B669216</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/floiges/YNZY.git</string>
+	<string>https://github.com/floiges/AHOA.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7F26A5FC-C684-4D8A-B14E-2017A46E42A6</string>
+	<string>A38F74648A5FB76C3ADCE018F8CE772C5B669216</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7F26A5FC-C684-4D8A-B14E-2017A46E42A6</string>
+			<string>A38F74648A5FB76C3ADCE018F8CE772C5B669216</string>
 			<key>IDESourceControlWCCName</key>
-			<string>YNOA</string>
+			<string>AHOA</string>
 		</dict>
 	</array>
 </dict>

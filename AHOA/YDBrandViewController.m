@@ -399,7 +399,7 @@ typedef enum {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellDentifier=@"cellIdentifier";
+    static NSString *cellDentifier=@"UITableViewCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellDentifier];
     if(!cell){
@@ -421,7 +421,7 @@ typedef enum {
         UILabel *label = [[UILabel alloc] init];
         [label setText:sale.name];
         label.numberOfLines = 0;
-        label.font = [UIFont boldSystemFontOfSize:17.0f];
+        label.font = [UIFont boldSystemFontOfSize:15.0f];
         //        label.textAlignment = NSTextAlignmentCenter;
         [cell.contentView addSubview:label];
         
@@ -544,7 +544,19 @@ typedef enum {
 
 - (void)doubleClick:(UITapGestureRecognizer *)recognizer
 {
-    NSIndexPath *indexPath=[self.rightTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    NSIndexPath *indexPath;
+    NSIndexPath *temp1;
+    NSIndexPath *temp2;
+    temp1=[self.leftTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    temp2=[self.rightTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    if (temp1 >= temp2) {
+        indexPath = temp1;
+    }else{
+        indexPath = temp2;
+    }
+    
+    //NSIndexPath *indexPath=[self.rightTable indexPathForCell:(UITableViewCell *)recognizer.view];
+    //NSLog(@"第%d行",indexPath.row);
     [self.rightTable selectRowAtIndexPath:indexPath
                                  animated:NO
                            scrollPosition:UITableViewScrollPositionNone];

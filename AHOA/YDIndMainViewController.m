@@ -32,7 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.yorm = @"year";
-    [self customTitleView:@"调拨量(年)" withDateString:nil];
+    self.timeStamp = [[NSUserDefaults standardUserDefaults] objectForKey:@"analyseTime"];
+    [self customTitleView:@"调拨量(年)" withDateString:self.timeStamp];
     
     [self.navigationController.navigationBar setBarTintColor:UIColorFromRGB(0x3da8e5)];
     UIButton *btn=[[UIButton alloc] init];

@@ -320,7 +320,7 @@ static int count=0;
                         completion:nil];
     }
     
-    
+    [defaults removeObjectForKey:@"menuExists"];
     BOOL menuExists = [defaults boolForKey:@"menuExists"];
     if (!menuExists) {
         [self.HUD show:YES];

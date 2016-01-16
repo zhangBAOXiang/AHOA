@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99321F3A1C17158C0014E958 /* YDFunctionMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99321F391C17158C0014E958 /* YDFunctionMenuCell.m */; };
+		995801101C451CD80082E8CA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9958010F1C451CD80082E8CA /* icon.png */; settings = {ASSET_TAGS = (); }; };
+		99E4AEB01C3BEAFB0055C7BB /* YDSlideImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E4AEAF1C3BEAFB0055C7BB /* YDSlideImageCell.m */; settings = {ASSET_TAGS = (); }; };
 		E72042341A070E41005E0527 /* YDOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E72042331A070E41005E0527 /* YDOperation.m */; };
 		E72042361A0722AC005E0527 /* Brand.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72042351A0722AC005E0527 /* Brand.storyboard */; };
 		E723B4601AE77C4800084F41 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E723B4591AE77C4800084F41 /* AHKActionSheet.m */; };
@@ -21,7 +24,6 @@
 		E740C4801BF82E760009C318 /* YDIndSale.m in Sources */ = {isa = PBXBuildFile; fileRef = E740C47F1BF82E760009C318 /* YDIndSale.m */; };
 		E740C4831BF832D50009C318 /* YDIndSaleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E740C4821BF832D50009C318 /* YDIndSaleStore.m */; };
 		E740C4861BFA0B520009C318 /* YDIndBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E740C4851BFA0B520009C318 /* YDIndBrandViewController.m */; };
-		E7687F9E1BAFD2CF00E48D86 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E7687F9D1BAFD2CF00E48D86 /* icon.png */; };
 		E781D5A019BEDAA9004FFBB2 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D59F19BEDAA9004FFBB2 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E781D5A319BEDAB9004FFBB2 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5A219BEDAB9004FFBB2 /* MyMD5.m */; };
 		E781D5B219BEDACA004FFBB2 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5A619BEDACA004FFBB2 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -124,6 +126,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99321F381C17158C0014E958 /* YDFunctionMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDFunctionMenuCell.h; sourceTree = "<group>"; };
+		99321F391C17158C0014E958 /* YDFunctionMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDFunctionMenuCell.m; sourceTree = "<group>"; };
+		9958010F1C451CD80082E8CA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		99E4AEAE1C3BEAFB0055C7BB /* YDSlideImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSlideImageCell.h; sourceTree = "<group>"; };
+		99E4AEAF1C3BEAFB0055C7BB /* YDSlideImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSlideImageCell.m; sourceTree = "<group>"; };
 		E72042321A070E41005E0527 /* YDOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDOperation.h; sourceTree = "<group>"; };
 		E72042331A070E41005E0527 /* YDOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDOperation.m; sourceTree = "<group>"; };
 		E72042351A0722AC005E0527 /* Brand.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Brand.storyboard; sourceTree = "<group>"; };
@@ -150,7 +157,6 @@
 		E740C4821BF832D50009C318 /* YDIndSaleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDIndSaleStore.m; sourceTree = "<group>"; };
 		E740C4841BFA0B520009C318 /* YDIndBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDIndBrandViewController.h; sourceTree = "<group>"; };
 		E740C4851BFA0B520009C318 /* YDIndBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDIndBrandViewController.m; sourceTree = "<group>"; };
-		E7687F9D1BAFD2CF00E48D86 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E781D59E19BEDAA9004FFBB2 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		E781D59F19BEDAA9004FFBB2 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		E781D5A119BEDAB9004FFBB2 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
@@ -223,7 +229,7 @@
 		E7AF7E8E19C696F3009090C3 /* YDMenuSetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDMenuSetController.m; sourceTree = "<group>"; };
 		E7B3BEB119E5111C00FDA2FB /* YDSaleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDSaleStore.h; sourceTree = "<group>"; };
 		E7B3BEB219E5111C00FDA2FB /* YDSaleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDSaleStore.m; sourceTree = "<group>"; };
-		E7B4A55019B94BBB004B33E0 /* 安徽中烟.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "安徽中烟.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B4A55019B94BBB004B33E0 /* 营销客服.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "营销客服.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B4A55319B94BBB004B33E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7B4A55519B94BBB004B33E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E7B4A55719B94BBB004B33E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -458,6 +464,10 @@
 				E7B4A5AA19B94D5C004B33E0 /* YDImageButton.m */,
 				E7B4A58819B94BE4004B33E0 /* YDMainViewController.h */,
 				E7B4A58919B94BE4004B33E0 /* YDMainViewController.m */,
+				99E4AEAE1C3BEAFB0055C7BB /* YDSlideImageCell.h */,
+				99E4AEAF1C3BEAFB0055C7BB /* YDSlideImageCell.m */,
+				99321F381C17158C0014E958 /* YDFunctionMenuCell.h */,
+				99321F391C17158C0014E958 /* YDFunctionMenuCell.m */,
 				E7B4A58B19B94CE1004B33E0 /* YDSlipCell.h */,
 				E7B4A58C19B94CE1004B33E0 /* YDSlipCell.m */,
 				E7BF61BD19C021FE0012DF5B /* YDMenu.h */,
@@ -590,7 +600,7 @@
 		E7B4A55119B94BBB004B33E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7B4A55019B94BBB004B33E0 /* 安徽中烟.app */,
+				E7B4A55019B94BBB004B33E0 /* 营销客服.app */,
 				E7B4A57119B94BBB004B33E0 /* AHOATests.xctest */,
 			);
 			name = Products;
@@ -667,7 +677,7 @@
 		E7B4A58E19B94D26004B33E0 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				E7687F9D1BAFD2CF00E48D86 /* icon.png */,
+				9958010F1C451CD80082E8CA /* icon.png */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -768,7 +778,7 @@
 			);
 			name = AHOA;
 			productName = YNOA;
-			productReference = E7B4A55019B94BBB004B33E0 /* 安徽中烟.app */;
+			productReference = E7B4A55019B94BBB004B33E0 /* 营销客服.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E7B4A57019B94BBB004B33E0 /* AHOATests */ = {
@@ -799,6 +809,14 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = zoomlgd;
 				TargetAttributes = {
+					E7B4A54F19B94BBB004B33E0 = {
+						DevelopmentTeam = ZPV3V7BWV5;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
 					E7B4A57019B94BBB004B33E0 = {
 						TestTargetID = E7B4A54F19B94BBB004B33E0;
 					};
@@ -830,6 +848,7 @@
 			files = (
 				E7EE96B819C18F4600AA7F07 /* blackArrow.png in Resources */,
 				E7EE96B919C18F4600AA7F07 /* blackArrow@2x.png in Resources */,
+				995801101C451CD80082E8CA /* icon.png in Resources */,
 				E7B4A56C19B94BBB004B33E0 /* Images.xcassets in Resources */,
 				E7B4A55E19B94BBB004B33E0 /* InfoPlist.strings in Resources */,
 				E781D5EF19BEE2E0004FFBB2 /* BPushConfig.plist in Resources */,
@@ -838,7 +857,6 @@
 				E72042361A0722AC005E0527 /* Brand.storyboard in Resources */,
 				E7EE969B19C1880A00AA7F07 /* Contacts.storyboard in Resources */,
 				E7EE96BB19C18F4600AA7F07 /* blueArrow@2x.png in Resources */,
-				E7687F9E1BAFD2CF00E48D86 /* icon.png in Resources */,
 				E7EE96BD19C18F4600AA7F07 /* grayArrow@2x.png in Resources */,
 				E7EE96BA19C18F4600AA7F07 /* blueArrow.png in Resources */,
 				E740C47A1BF8253C0009C318 /* IndSale.storyboard in Resources */,
@@ -891,6 +909,7 @@
 				E7EE969C19C1880A00AA7F07 /* YDContactViewController.m in Sources */,
 				E723B4631AE77C4800084F41 /* UIWindow+AHKAdditions.m in Sources */,
 				E7B3BEB319E5111C00FDA2FB /* YDSaleStore.m in Sources */,
+				99321F3A1C17158C0014E958 /* YDFunctionMenuCell.m in Sources */,
 				E7AEF88A19D55A0E00743128 /* YDBusinessName.m in Sources */,
 				E7E8788D19D299D40091E1E5 /* YDSaleAnaylse.m in Sources */,
 				E7FA45401BA41495007A0AD2 /* YDSaleStockStore.m in Sources */,
@@ -914,6 +933,7 @@
 				E781D5A019BEDAA9004FFBB2 /* GDataXMLNode.m in Sources */,
 				E723B4611AE77C4800084F41 /* AHKActionSheetViewController.m in Sources */,
 				E740C47D1BF826A90009C318 /* YDIndMainViewController.m in Sources */,
+				99E4AEB01C3BEAFB0055C7BB /* YDSlideImageCell.m in Sources */,
 				E7EE96B719C18F4600AA7F07 /* EGORefreshTableHeaderView.m in Sources */,
 				E72D4BE31A0C9EE500B528F9 /* YDMenuStore.m in Sources */,
 				E7FA453D1BA41149007A0AD2 /* YDSaleStock.m in Sources */,
@@ -1007,6 +1027,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "营销客服";
 				PROVISIONING_PROFILE = "586c2643-2bbf-461b-abcb-3510d7b20932";
 				SDKROOT = iphoneos;
 			};
@@ -1040,6 +1061,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "营销客服";
 				PROVISIONING_PROFILE = "586c2643-2bbf-461b-abcb-3510d7b20932";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1051,8 +1073,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Zoom Legend Data Analyze Technology Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Zoom Legend Data Analyze Technology Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHOA/AHOA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1068,7 +1091,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoomlgd.ahzyIphoneInHouse;
-				PRODUCT_NAME = "安徽中烟";
+				PRODUCT_NAME = "营销客服";
 				PROVISIONING_PROFILE = "586c2643-2bbf-461b-abcb-3510d7b20932";
 				VALID_ARCHS = "armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
@@ -1082,6 +1105,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hangzhou Zoom Legend Data Analyze Technology Ltd";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hangzhou Zoom Legend Data Analyze Technology Ltd";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHOA/AHOA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1097,7 +1121,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoomlgd.ahzyIphoneInHouse;
-				PRODUCT_NAME = "安徽中烟";
+				PRODUCT_NAME = "营销客服";
 				PROVISIONING_PROFILE = "586c2643-2bbf-461b-abcb-3510d7b20932";
 				VALID_ARCHS = "armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;

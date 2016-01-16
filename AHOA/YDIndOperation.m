@@ -17,7 +17,6 @@
 }
 
 - (void)getIndSaleAnaylseSOAP:(NSString *)code tobaRange:(NSString *)range showType:(NSString *)type {
-    
     NSString *serverHost=[YDSoapAndXmlParseUtil serverHostFromLocal];
     YDAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
