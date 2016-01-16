@@ -15,6 +15,7 @@
 static NSMutableDictionary *mobilecodes=nil;
 static NSMutableArray *departments=nil;
 static NSMutableData *data=nil;
+static NSMutableArray *aa = nil;
 
 @interface YDAppDelegate ()<NSURLConnectionDataDelegate,UIAlertViewDelegate>
 
