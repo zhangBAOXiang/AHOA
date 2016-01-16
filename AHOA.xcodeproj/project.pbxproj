@@ -112,6 +112,7 @@
 		E7FA453A1BA40DFD007A0AD2 /* YDSaleStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FA45391BA40DFD007A0AD2 /* YDSaleStockViewController.m */; };
 		E7FA453D1BA41149007A0AD2 /* YDSaleStock.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FA453C1BA41149007A0AD2 /* YDSaleStock.m */; };
 		E7FA45401BA41495007A0AD2 /* YDSaleStockStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FA453F1BA41495007A0AD2 /* YDSaleStockStore.m */; };
+		FC285674E717311BB4E4F23B /* libPods-AHOA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F7838449894A0BC77AB5CE /* libPods-AHOA.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		156A91A26938251B00BB689D /* Pods-AHOA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHOA.release.xcconfig"; path = "Pods/Target Support Files/Pods-AHOA/Pods-AHOA.release.xcconfig"; sourceTree = "<group>"; };
+		2639E05BF21143A240B8ED0C /* Pods-AHOA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHOA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AHOA/Pods-AHOA.debug.xcconfig"; sourceTree = "<group>"; };
+		87F7838449894A0BC77AB5CE /* libPods-AHOA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AHOA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99321F381C17158C0014E958 /* YDFunctionMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDFunctionMenuCell.h; sourceTree = "<group>"; };
 		99321F391C17158C0014E958 /* YDFunctionMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDFunctionMenuCell.m; sourceTree = "<group>"; };
 		9958010F1C451CD80082E8CA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 				E7B4A55619B94BBB004B33E0 /* CoreGraphics.framework in Frameworks */,
 				E7B4A55819B94BBB004B33E0 /* UIKit.framework in Frameworks */,
 				E7B4A55419B94BBB004B33E0 /* Foundation.framework in Frameworks */,
+				FC285674E717311BB4E4F23B /* libPods-AHOA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AB1577AB09215B8789651E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2639E05BF21143A240B8ED0C /* Pods-AHOA.debug.xcconfig */,
+				156A91A26938251B00BB689D /* Pods-AHOA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E723B4571AE77C3500084F41 /* AHKActionSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +606,7 @@
 				E7B4A57819B94BBB004B33E0 /* AHOATests */,
 				E7B4A55219B94BBB004B33E0 /* Frameworks */,
 				E7B4A55119B94BBB004B33E0 /* Products */,
+				7AB1577AB09215B8789651E4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -621,6 +636,7 @@
 				E7B4A55519B94BBB004B33E0 /* CoreGraphics.framework */,
 				E7B4A55719B94BBB004B33E0 /* UIKit.framework */,
 				E7B4A57219B94BBB004B33E0 /* XCTest.framework */,
+				87F7838449894A0BC77AB5CE /* libPods-AHOA.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -766,9 +782,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7B4A58219B94BBB004B33E0 /* Build configuration list for PBXNativeTarget "AHOA" */;
 			buildPhases = (
+				BE4CB65E3601C5E8F6093FA4 /* Check Pods Manifest.lock */,
 				E7B4A54C19B94BBB004B33E0 /* Sources */,
 				E7B4A54D19B94BBB004B33E0 /* Frameworks */,
 				E7B4A54E19B94BBB004B33E0 /* Resources */,
+				CBE034EE1B2D99F968C638C8 /* Embed Pods Frameworks */,
+				5B1F4061ADBB7E4208F52C5F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -874,6 +893,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B1F4061ADBB7E4208F52C5F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AHOA/Pods-AHOA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE4CB65E3601C5E8F6093FA4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE034EE1B2D99F968C638C8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AHOA/Pods-AHOA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7B4A54C19B94BBB004B33E0 /* Sources */ = {
@@ -1068,6 +1135,7 @@
 		};
 		E7B4A58319B94BBB004B33E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2639E05BF21143A240B8ED0C /* Pods-AHOA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1098,6 +1166,7 @@
 		};
 		E7B4A58419B94BBB004B33E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 156A91A26938251B00BB689D /* Pods-AHOA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
