@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		99321F3A1C17158C0014E958 /* YDFunctionMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99321F391C17158C0014E958 /* YDFunctionMenuCell.m */; };
-		995801101C451CD80082E8CA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9958010F1C451CD80082E8CA /* icon.png */; settings = {ASSET_TAGS = (); }; };
-		99E4AEB01C3BEAFB0055C7BB /* YDSlideImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E4AEAF1C3BEAFB0055C7BB /* YDSlideImageCell.m */; settings = {ASSET_TAGS = (); }; };
+		995801101C451CD80082E8CA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9958010F1C451CD80082E8CA /* icon.png */; };
+		99E4AEB01C3BEAFB0055C7BB /* YDSlideImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E4AEAF1C3BEAFB0055C7BB /* YDSlideImageCell.m */; };
 		E72042341A070E41005E0527 /* YDOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E72042331A070E41005E0527 /* YDOperation.m */; };
 		E72042361A0722AC005E0527 /* Brand.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72042351A0722AC005E0527 /* Brand.storyboard */; };
 		E723B4601AE77C4800084F41 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E723B4591AE77C4800084F41 /* AHKActionSheet.m */; };
@@ -29,7 +29,6 @@
 		E781D5B219BEDACA004FFBB2 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5A619BEDACA004FFBB2 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E781D5B319BEDACA004FFBB2 /* GzipCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5AA19BEDACA004FFBB2 /* GzipCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E781D5B419BEDACA004FFBB2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5AC19BEDACA004FFBB2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E781D5B519BEDACA004FFBB2 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E781D5AD19BEDACA004FFBB2 /* libBPush.a */; };
 		E781D5B619BEDACA004FFBB2 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5AF19BEDACA004FFBB2 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E781D5B719BEDACA004FFBB2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5B119BEDACA004FFBB2 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E781D5BC19BEDAD6004FFBB2 /* YDSoapAndXmlParseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E781D5B919BEDAD6004FFBB2 /* YDSoapAndXmlParseUtil.m */; };
@@ -325,7 +324,6 @@
 				E781D5DD19BEDFAE004FFBB2 /* libxml2.dylib in Frameworks */,
 				E7B4A55619B94BBB004B33E0 /* CoreGraphics.framework in Frameworks */,
 				E7B4A55819B94BBB004B33E0 /* UIKit.framework in Frameworks */,
-				E781D5B519BEDACA004FFBB2 /* libBPush.a in Frameworks */,
 				E7B4A55419B94BBB004B33E0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

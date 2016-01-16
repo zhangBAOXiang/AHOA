@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7B4A54F19B94BBB004B33E0"
-               BuildableName = "&#x5b89;&#x5fbd;&#x4e2d;&#x70df;.app"
+               BuildableName = "&#x8425;&#x9500;&#x5ba2;&#x670d;.app"
                BlueprintName = "AHOA"
                ReferencedContainer = "container:AHOA.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7B4A54F19B94BBB004B33E0"
-            BuildableName = "&#x5b89;&#x5fbd;&#x4e2d;&#x70df;.app"
+            BuildableName = "&#x8425;&#x9500;&#x5ba2;&#x670d;.app"
             BlueprintName = "AHOA"
             ReferencedContainer = "container:AHOA.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7B4A54F19B94BBB004B33E0"
-            BuildableName = "&#x5b89;&#x5fbd;&#x4e2d;&#x70df;.app"
+            BuildableName = "&#x8425;&#x9500;&#x5ba2;&#x670d;.app"
             BlueprintName = "AHOA"
             ReferencedContainer = "container:AHOA.xcodeproj">
          </BuildableReference>
@@ -90,7 +90,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7B4A54F19B94BBB004B33E0"
-            BuildableName = "&#x5b89;&#x5fbd;&#x4e2d;&#x70df;.app"
+            BuildableName = "&#x8425;&#x9500;&#x5ba2;&#x670d;.app"
             BlueprintName = "AHOA"
             ReferencedContainer = "container:AHOA.xcodeproj">
          </BuildableReference>

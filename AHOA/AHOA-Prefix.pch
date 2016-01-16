@@ -19,7 +19,6 @@
 #import "EGORefreshTableHeaderView.h"
 #import "MBProgressHUD.h"
 #import "MyMD5.h"
-#import "BPush.h"
 #import "Reachability.h"
 #import "YDTool.h"
 
