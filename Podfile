@@ -11,6 +11,8 @@ pod 'IQKeyboardManager'
 pod 'FMDB', '~> 2.5'
 pod 'AFNetworking'
 pod 'XMLDictionary', '~> 1.4'
+pod 'AHKActionSheet', '~> 0.5.3'
+pod 'GCDiscreetNotificationView', '~> 1.0.2'
 end
 
 target 'AHOATests' do
